@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+   {% if user.is_authenticated %}
+       <div class="page-container">
+
+           <h2 class="top-menu">Hello {{ user.username }},</h2>
+           <p>A little about us</p>
+           <p>When you are here, you are Family</p>
+
+       </div>
+   {% endif %}
+   <div class="content container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="links">
+                   <!-- Example row of columns -->
+                   <div class="row">
+                       <div class="col-md-3">
+                           <div class="thumbnail">
+                               <img src="{% static "images/image1.jpg" %}" alt="customer"/>
+                               <div class="caption">
+                                   <h2>Customer</h2>
+                                   <p>We see our success in our customers success </p>
+
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="thumbnail">
+                               <img src="{% static "images/services.jpeg" %}" alt="cupcakes"/>
+                               <div class="caption">
+                                   <h2>Services</h2>
+                                   <p>Great Services</p>
+
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="thumbnail">
+                               <img src="{% static "images/flavours.jpg" %}" alt="lunch"/>
+                               <div class="caption">
+                                   <h2>Flavours</h2>
+                                   <p>Vibrant Flavours.</p>
+
+                               </div>
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   </body>
+
+{% endblock %}
+
+</html>
