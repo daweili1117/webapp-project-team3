@@ -25,6 +25,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\indianexpress" />
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\registration" />
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates" />
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="restaurant" type="Python.DjangoServer" factoryName="Django server">
@@ -61,11 +74,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583522354731</updated>
-      <workItem from="1583522411487" duration="6370000" />
+      <workItem from="1583522411487" duration="7157000" />
+      <workItem from="1583788532677" duration="2662000" />
+      <workItem from="1583865101535" duration="70305000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583945912876">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583945912876" />
+    <state x="379" y="96" width="671" height="536" key="find.popup" timestamp="1584042201237">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="96" width="671" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1584042201237" />
   </component>
 </project>
