@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'indianexpress/base.html' %}
+{% load static %}
+
+
+
+
+
+<h2>Reservation</h2>
+<form method="post">
+{% block content %}
+  {% csrf_token %}
+    <head>
+    <meta charset="UTF-8">
+    <title>Book Us!</title>
+
+    <style>
+        body{
+            font-family: 'Raleway', sans-serif;
+            font-weight: 200;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .banner-container {
+            padding-top: 20px;
+            width:670px;
+        }
+
+        .container-time{
+            background-color: rgba(0,0,0,.95);
+            padding: 30px;
+            outline: 2px dashed #998100;
+            outline-offset: -20px;
+            text-align: center;
+        }
+
+        .heading{
+            font-size: 35px;
+        }
+
+        .heading-days{
+            color: #998100;
+            font-size: 30px;
+        }
+
+        .heading-phone{
+            font-size: 20px;
+        }
+
+        .container-form{
+            padding: 10px 0;
+            margin: 0 auto;
+            color: #000;
+        }
+
+        form{
+            display: grid;
+            grid-row-gap: 20px ;
+        }
+
+        .btn{
+            background-color: rgba(0,0,0,.95);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .2s;
+            width: 100px;
+        }
+
+        .btn:hover{
+            transform: scale(1.03);
+            box-shadow: 10px 12px 15px rgba(0,0,0,.3);
+        }
+    </style>
+    </head>
+    <body>
+
+    <div class="banner-container">
+        <div class="container-time">
+            <h2 class="heading">TIME OPEN</h2>
+            <h3 class="heading-days">Monday-Saturday</h3>
+            <p>11am-10pm (Lunch and Dinner)</p>
+            <p>Sunday closed</p>
+            <h3 class="heading-days">Contact Us!</h3>
+            <p>7120 Howard St.</p>
+            <h4 class="heading-phone">Call us @ 214-415-6842</h4>
+        </div>
+    </div>
+        <div class="container-form">
+            <form action="#">
+                <h2 class="heading heading-yellow">Make a Reservation!</h2>
+
+                <div class="form-field">
+                    <input type="text" placeholder="Your Name">
+                </div>
+
+                <div class="form-field">
+                    <input type="email" placeholder="Your Email">
+                </div>
+
+                <div class="form-field">
+                    <input type="text" placeholder="Phone Number">
+                </div>
+
+                <div class="form-field">
+                    <input type="date" placeholder="Date">
+                </div>
+
+                <div class="form-field">
+                    <input type="time" placeholder="Time">
+                </div>
+
+                <div class="form-field">
+                    <input type="number" placeholder="Number of People">
+                </div>
+
+                <div class="form-field">
+                    <input type="text" placeholder="Mention any special requests">
+                </div>
+                <button class="btn">Submit</button>
+
+            </form>
+
+    </div>
+*
+</body>
+
+
+</form>
+{% endblock content %}
+</html>
