@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'indianexpress/base.html' %}
+{% load static %}
+<h2>Reservation</h2>
+<form method="post">
+{% block content %}
+  {% csrf_token %}
+    <head>
     <meta charset="UTF-8">
     <title>Book Us!</title>
 
     <style>
         body{
             font-family: 'Raleway', sans-serif;
-            font-weigh: 400;
+            font-weight: 200;
             color: #fff;
             letter-spacing: 1px;
         }
 
-        .container{
-            background-color: #fafafa;
-            margin: 200px;
-            box-shadow: 10px 15px 20px rgba(0,0,0,.1);
-            display: grid;
-            grid-template-columns: 40% 60%;
+        .banner-container {
+            padding-top: 20px;
+            width:670px;
         }
 
         .container-time{
             background-color: rgba(0,0,0,.95);
-            padding: 50px;
-            outline: 3px dashed #998100;
-            outline-offset: -30px;
+            padding: 30px;
+            outline: 2px dashed #998100;
+            outline-offset: -20px;
             text-align: center;
         }
 
@@ -42,7 +46,7 @@
         }
 
         .container-form{
-            padding: 20px 0;
+            padding: 10px 0;
             margin: 0 auto;
             color: #000;
         }
@@ -58,9 +62,10 @@
             border: none;
             padding: 10px 20px;
             font-size: 18px;
-            border-radius: 100px;
+            border-radius: 10px;
             cursor: pointer;
             transition: .2s;
+            width: 100px;
         }
 
         .btn:hover{
@@ -68,9 +73,10 @@
             box-shadow: 10px 12px 15px rgba(0,0,0,.3);
         }
     </style>
-</head>
-<body>
-    <div class="container">
+    </head>
+    <body>
+
+    <div class="banner-container">
         <div class="container-time">
             <h2 class="heading">TIME OPEN</h2>
             <h3 class="heading-days">Monday-Saturday</h3>
@@ -79,11 +85,11 @@
             <h3 class="heading-days">Contact Us!</h3>
             <p>7120 Howard St.</p>
             <h4 class="heading-phone">Call us @ 214-415-6842</h4>
-
         </div>
+    </div>
         <div class="container-form">
             <form action="#">
-                <h2 class=""heading heading-yellow">Make a Reservation!</h2>
+                <h2 class="heading heading-yellow">Make a Reservation!</h2>
 
                 <div class="form-field">
                     <input type="text" placeholder="Your Name">
@@ -113,10 +119,15 @@
                     <input type="text" placeholder="Mention any special requests">
                 </div>
                 <button class="btn">Submit</button>
+
             </form>
 
-        </div>
     </div>
-
+*
 </body>
+
+
+</form>
+{% endblock content %}
 </html>
+
