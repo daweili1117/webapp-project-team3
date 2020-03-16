@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="03f94416-f5ce-4e19-b9d9-b3a91082e788" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indianexpress/templates/indianexpress/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/indianexpress/templates/indianexpress/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indianexpress/templates/indianexpress/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/indianexpress/templates/indianexpress/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indianexpress/templates/indianexpress/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/indianexpress/templates/indianexpress/gallery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.cart.html">
+  <component name="RunManager" selected="JavaScript Debug.gallery.html">
     <configuration name="cart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/restaurant/indianexpress/templates/indianexpress/cart.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -90,9 +89,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.gallery.html" />
         <item itemvalue="JavaScript Debug.cart.html" />
         <item itemvalue="JavaScript Debug.menu.html" />
-        <item itemvalue="JavaScript Debug.gallery.html" />
       </list>
     </recent_temporary>
   </component>
@@ -112,6 +111,7 @@
       <workItem from="1584159983250" duration="4001000" />
       <workItem from="1584202244732" duration="583000" />
       <workItem from="1584396264837" duration="686000" />
+      <workItem from="1584399527686" duration="796000" />
     </task>
     <servers />
   </component>
@@ -135,12 +135,12 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583945912876" />
-    <state x="349" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1584396265355">
+    <state x="349" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1584399527951">
       <screen x="0" y="23" width="1344" height="774" />
     </state>
     <state x="349" y="252" key="com.intellij.ide.util.TipDialog/0.0.1344.840@0.0.1344.840" timestamp="1584159984724" />
     <state x="349" y="253" key="com.intellij.ide.util.TipDialog/0.23.1344.768@0.23.1344.768" timestamp="1584202245911" />
-    <state x="349" y="255" key="com.intellij.ide.util.TipDialog/0.23.1344.774@0.23.1344.774" timestamp="1584396265355" />
+    <state x="349" y="255" key="com.intellij.ide.util.TipDialog/0.23.1344.774@0.23.1344.774" timestamp="1584399527951" />
     <state x="379" y="96" width="671" height="536" key="find.popup" timestamp="1584042201237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
