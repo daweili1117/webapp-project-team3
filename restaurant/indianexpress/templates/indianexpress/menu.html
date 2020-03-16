@@ -10,13 +10,21 @@
             height: auto;
         }
 
-    </style>
 
+.product-image {
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    max-width: 200px;
+    vertical-align: middle;
+
+}
+
+    </style>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
     </head>
@@ -29,30 +37,30 @@
 
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-md-6">
                 <h3>VEG</h3>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <h3>NON-VEG</h3>
             </div>
         </div>
 
         <h4>Soup</h4>
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/veghotsoup.jpg" %}" alt="veg hot soup"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/veghotsoup.jpg" %}" class="product-image" alt="veg hot soup"/></div>
                 <div>veg hot soup</div>
                 <div>3.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/Chickenhotsoup.jpg" %}" alt="Chicken hot soup"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/Chickenhotsoup.jpg" %}" class="product-image" alt="Chicken hot soup"/></div>
                 <div>Chicken hot soup</div>
                 <div>4.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
@@ -60,120 +68,120 @@
 
         <h4>Starter</h4>
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/OnionVegPakoa.jpg" %}" alt="Onion Veg Pakoda"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/OnionVegPakoa.jpg" %}" class="product-image" alt="Onion Veg Pakoda"/></div>
                 <div>Onion Veg Pakoda</div>
                 <div>3.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/ChiliChicken.jpg" %}" alt="Chili Chicken"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/ChiliChicken.jpg" %}" class="product-image" alt="Chili Chicken"/></div>
                 <div>Chili Chicken</div>
                 <div>6.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
 
         <h4>Entree</h4>
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/DalTada.jpg" %}" alt="Dal Tadka"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/DalTada.jpg" %}" class="product-image" alt="Dal Tadka"/></div>
                 <div>Dal Tadka</div>
                 <div>8.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/ButterChicken.jpg" %}" alt="Butter Chicken"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/ButterChicken.jpg" %}" class="product-image" alt="Butter Chicken"/></div>
                 <div>Butter Chicken</div>
                 <div>10.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
 
 
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/AlooGobi.jpg" %}" alt="Aloo Gobi"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/AlooGobi.jpg" %}" class="product-image" alt="Aloo Gobi"/></div>
                 <div>Aloo Gobi</div>
                 <div>9.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/ChickenCurry.jpg" %}" alt="Chicken Curry"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/ChickenCurry.jpg" %}" class="product-image"  alt="Chicken Curry"/></div>
                 <div>Chicken Curry</div>
                 <div>10.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
 
         <h4>Bread</h4>
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/GarlicNaan.jpg" %}" alt="Garlic Naan"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/GarlicNaan.jpg" %}" class="product-image" alt="Garlic Naan"/></div>
                 <div>Garlic Naan</div>
                 <div>2.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/BreadBasket.jpg" %}" alt="Bread Basket"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/BreadBasket.jpg" %}"class="product-image"  alt="Bread Basket"/></div>
                 <div>Bread Basket</div>
                 <div>3.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
 
         <h4>Dessert</h4>
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/GluaabJamun.jpg" %}" alt="Gulab Jamun"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/GluaabJamun.jpg" %}" class="product-image" alt="Gulab Jamun"/></div>
                 <div>Gulab Jamun</div>
                 <div>2.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/RasMalai.jpeg" %}" alt="Ras Malai"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/RasMalai.jpeg" %}" class="product-image" alt="Ras Malai"/></div>
                 <div>Ras Malai</div>
                 <div>3.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
 
         <h4>Beverage</h4>
         <div class="row">
-            <div class="col">
-                <div><img src="{% static "images/menu-image/SoftDrink.jpg" %}" alt="Soft Drink"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/SoftDrink.jpg" %}" class="product-image"  alt="Soft Drink"/></div>
                 <div>Soft Drink</div>
                 <div>0.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
-            <div class="col">
-                <div><img src="{% static "images/menu-image/Mango Lassi" %}" alt="Mango Lassi"/></div>
+            <div class="col-md-3">
+                <div><img src="{% static "images/menu-image/Mango Lassi" %}" class="product-image"  alt="Mango Lassi"/></div>
                 <div>Mango Lassi</div>
                 <div>2.99</div>
             </div>
-            <div class="col">
+            <div class="col-md-3">
                 <input type="number" class="numb" id="1" value="1">
             </div>
         </div>
