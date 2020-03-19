@@ -1,9 +1,38 @@
 
 body {
     padding-left: 15px;
+    text-align: center;
 }
 
 h1 a {
     color: #FCA205;
     font-family: 'cursive';
 }
+
+.navbar {
+            padding: 130px;
+            text-align: left;
+            color: black !important;
+            margin-bottom: 0;
+            padding-bottom: 25px;
+
+            background-image: url("/static/images/Gallery/1.jpg");
+        }
+          .navbar-inverse li>a {
+            color: #00ff00 !important;
+              font-weight: bold;
+              font-size: xx-large;
+              padding-left: -25px;
+         }
+
+ .navbar-brand {
+              position: relative;
+              height:100px;
+              width: 100px;
+              left: -95px;
+              image-resolution: revert;
+              color: #004d00 !important;
+              font-weight: bolder !important;
+              font-size: xx-large !important;
+
+         }

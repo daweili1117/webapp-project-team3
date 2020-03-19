@@ -3,17 +3,37 @@
 {% extends 'indianexpress/base.html' %}
 {% load static %}
 {% block content %}
+    <style>
+    h1 {
+        text-align: center;
+
+    }
+    p {
+        text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+
+    </style>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
 <body>
-   {% if user.is_authenticated %}
-       <div class="page-container">
 
-           <h2 class="top-menu">Hello {{ user.username }},</h2>
-           <p>A little about us</p>
-           <p>When you are here, you are Family</p>
+       <div class="page-container">
+           <h1>Welcome to Indian Express </h1>
+           <p>
+               Our Address<br/>
+           110 S 67th St, Omaha, NE 68182<br/>
+           402-111-1111</p>
+           <h2>A little About Us</h2>
+
 
        </div>
-   {% endif %}
+
    <div class="content container">
        <div class="row">
            <div class="col-md-12">
@@ -56,6 +76,16 @@
            </div>
        </div>
    </div>
+       <p> <b>Indian Xpress</b> has been serving authentic Indian cuisine and catering services for over 5 years<br/>
+    in Omaha, Nebraska. We are just 5 minutes walk from University of Nebraska at  Omaha and<br/>
+    professional associates who work in Aksarben area.We offerseveral items in menu, from <br/>
+    starters main course and desserts.<br/>
+    We offer a blend of authentic ancient traditional food with modern touch.<br/>
+    From the moment you step into Indian Xpress, making your whole experience a fulfilling,satisfying<br/>
+        and relaxing one is your only obsession.<br/>
+    We pride ourselves on serving delicious meals that rival fine dining but doing so in a fun,casual<br/>
+    environment at reasonable prices.</p>
+
    </body>
 
 {% endblock %}

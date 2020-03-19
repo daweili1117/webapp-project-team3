@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% extends 'indianexpress/base.html' %}
 {% load static %}
+
 <h2>Reservation</h2>
 <form method="post">
 {% block content %}
   {% csrf_token %}
     <head>
     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Book Us!</title>
 
     <style>
-        body{
-            font-family: 'Raleway', sans-serif;
-            font-weight: 200;
-            color: #fff;
-            letter-spacing: 1px;
+        body {
+            color: white;
         }
 
         .banner-container {
-            padding-top: 20px;
+            padding-top: 10px;
             width:670px;
         }
 
         .container-time{
+
             background-color: rgba(0,0,0,.95);
-            padding: 30px;
+            padding: 20px;
             outline: 2px dashed #998100;
             outline-offset: -20px;
             text-align: center;
+
         }
 
         .heading{
@@ -43,12 +44,6 @@
 
         .heading-phone{
             font-size: 20px;
-        }
-
-        .container-form{
-            padding: 10px 0;
-            margin: 0 auto;
-            color: #000;
         }
 
         form{
@@ -72,6 +67,7 @@
             transform: scale(1.03);
             box-shadow: 10px 12px 15px rgba(0,0,0,.3);
         }
+
     </style>
     </head>
     <body>
@@ -104,11 +100,11 @@
                 </div>
 
                 <div class="form-field">
-                    <input type="date" placeholder="Date">
+                    <input type="date" placeholder="Date" title="Please Pick Up Date.">
                 </div>
 
                 <div class="form-field">
-                    <input type="time" placeholder="Time">
+                    <input type="time" placeholder="Time" title="Please choose Time." >
                 </div>
 
                 <div class="form-field">
@@ -121,13 +117,8 @@
                 <button class="btn">Submit</button>
 
             </form>
-
-    </div>
-*
+        </div>
 </body>
-
-
-</form>
+    </form>
 {% endblock content %}
 </html>
-

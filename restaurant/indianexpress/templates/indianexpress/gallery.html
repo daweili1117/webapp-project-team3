@@ -9,6 +9,7 @@
             width: 100%;
             height: auto;
         }
+
     .desc {
     position: absolute;
     color: #fff;
@@ -22,9 +23,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
-
-
-
+           <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -38,7 +37,7 @@
 
 
         <div class="container">
-          <h2>Gallery</h2>
+
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -48,6 +47,7 @@
                       <li data-target="#myCarousel" data-slide-to="3"></li>
                       <li data-target="#myCarousel" data-slide-to="4"></li>
                   </ol>
+
     <!-- Wrapper for slides -->
               <div class="carousel-inner">
                   <div class="item active">
@@ -67,18 +67,15 @@
 
                   <div class="item">
                         <div class="desc">Awesome food 3</div>
-                        <img src="{% static "images/Gallery/3.jpeg" %}" class="d-block w-100" alt="3">
+                        <img src="{% static "images/Gallery/5.jpg" %}" class="d-block w-100" alt="3" width="100%">
                   </div>
 
                   <div class="item">
                         <div class="desc">Awesome food 4</div>
-                        <img src="{% static "images/Gallery/4.jpg" %}" class="d-block w-100" alt="4">
+                        <img src="{% static "images/Gallery/7.webp" %}" class="d-block w-100" alt="4" width="100%">
                   </div>
 
-
-              </div>
-
-                <!-- Left and right controls -->
+                  <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left"></span>
                   <span class="sr-only">Previous</span>
@@ -90,9 +87,9 @@
            </div>
         </div>
 
+        </div>
 
-
-
+   </form>
     </body>
 {% endblock content %}
 

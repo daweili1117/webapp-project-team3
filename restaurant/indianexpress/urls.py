@@ -10,6 +10,7 @@ urlpatterns = [
     path('reservation/', views.reservation, name="reservation"),
     path('menu/', views.menu, name="menu"),
     path('cart/', views.cart, name="cart"),
+    path('gallery/', views.gallery, name="gallery"),
 ]
 
 

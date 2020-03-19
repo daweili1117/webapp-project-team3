@@ -13,7 +13,7 @@ from django.db import IntegrityError
 from django.utils.http import urlsafe_base64_decode
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-from indianexpress.token import account_activation_token
+
 from django.template.loader import render_to_string
 
 
@@ -86,3 +86,6 @@ def menu(request):
 
 def cart(request):
     return render(request, 'indianexpress/cart.html', {'indianexpress': cart})
+
+def gallery(request):
+    return render(request, 'indianexpress/gallery.html', {'indianexpress': gallery})
