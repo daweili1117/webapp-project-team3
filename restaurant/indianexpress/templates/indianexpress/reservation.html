@@ -3,7 +3,7 @@
 {% extends 'indianexpress/base.html' %}
 {% load static %}
 
-<h2>Reservation</h2>
+<h1>Reservation</h1>
 <form method="post">
 {% block content %}
   {% csrf_token %}
@@ -15,12 +15,13 @@
 
     <style>
         body {
-            color: white;
+            color: black;
+            text-align: center;
         }
 
         .banner-container {
             padding-top: 10px;
-            width:auto;
+            width:750px;
         }
 
         .container-time{
@@ -33,22 +34,35 @@
 
         }
 
-        .heading{
+        .heading-timeopen{
+            color: #998100;
             font-size: 35px;
         }
 
-        .heading-days{
+        .heading-daysandcontact{
             color: #998100;
             font-size: 30px;
         }
 
+        .heading-time{
+            color: antiquewhite;
+            font-size: 15px;
+        }
+
         .heading-phone{
+            color: antiquewhite;
             font-size: 20px;
         }
 
         form{
             display: grid;
             grid-row-gap: 20px ;
+            grid-gap: 20px;
+            font-weight: 700;
+        }
+
+        .form-field{
+           display: grid;
         }
 
         .btn{
@@ -60,7 +74,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: .2s;
-            width: 100px;
+            width: 750px;
         }
 
         .btn:hover{
@@ -74,13 +88,13 @@
 
     <div class="banner-container">
         <div class="container-time">
-            <h2 class="heading">TIME OPEN</h2>
-            <h3 class="heading-days">Monday-Saturday</h3>
-            <p>11am-10pm (Lunch and Dinner)</p>
-            <p>Sunday closed</p>
-            <h3 class="heading-days">Contact Us!</h3>
-            <p>7120 Howard St.</p>
-            <h4 class="heading-phone">Call us @ 214-415-6842</h4>
+            <h2 class="heading-timeopen">TIME OPEN</h2>
+            <h3 class="heading-daysandcontact">Monday-Saturday</h3>
+            <h4 class="heading-time">11am-10pm (Lunch and Dinner)</h4>
+            <h4 class="heading-time">Sunday closed</h4>
+            <h3 class="heading-daysandcontact">Contact Us!</h3>
+            <h4 class="heading-time">1110 S 67th Street</h4>
+            <h4 class="heading-phone">Call us @ 402-111-1111</h4>
         </div>
     </div>
         <div class="container-form">
@@ -114,7 +128,7 @@
                 <div class="form-field">
                     <input type="text" placeholder="Mention any special requests">
                 </div>
-                <button class="btn">Submit</button>
+                <button class="btn">Confirm</button>
 
             </form>
         </div>
