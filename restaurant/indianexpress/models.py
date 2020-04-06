@@ -20,3 +20,11 @@ def update_profile_signal(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     instance.profile.save()
+
+class Reservation(models.Model):
+    name = models.CharField(max_length=250)
+    email = models.EmailField()
+    date = models.DateField()
+    time = models.TimeField()
+    guests = models.SmallIntegerField()
+    requests = models.TextField()
