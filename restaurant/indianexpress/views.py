@@ -77,7 +77,18 @@ def signup(request):
 
 
 def reservation(request):
-    return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation})
+    if request.method == 'POST':
+        a = request.POST['name']
+        b = request.POST['email']
+        c = request.POST['num']
+        d = request.POST['date']
+        e = request.POST['time']
+        f = request.POST['guests']
+        g = request.POST['requests']
+        bb=Reservation.objects.create(name=a,email=b,num=c,date=d,time=e,guests=f,requests=g)
+        bb.save()
+    aq='Book Us!'
+    return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title':aq})
 
 
 def menu(request):

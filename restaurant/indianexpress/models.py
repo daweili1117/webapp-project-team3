@@ -24,6 +24,7 @@ def update_profile_signal(sender, instance, created, **kwargs):
 class Reservation(models.Model):
     name = models.CharField(max_length=250)
     email = models.EmailField()
+    num = models.CharField(max_length=255, blank=True)
     date = models.DateField()
     time = models.TimeField()
     guests = models.SmallIntegerField()

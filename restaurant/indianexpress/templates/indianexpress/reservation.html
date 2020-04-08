@@ -4,9 +4,7 @@
 {% load static %}
 
 <h1>Reservation</h1>
-<form method="post">
 {% block content %}
-  {% csrf_token %}
     <head>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +58,7 @@
             grid-gap: 20px;
             font-weight: 700;
         }
-      
+
         .container-form{
             width: auto;
         }
@@ -103,34 +101,16 @@
         </div>
     </div>
         <div class="container-form">
-            <form action="#">
+            <form action="#" method="post"> {% csrf_token %}
                 <h2 class="heading heading-yellow">Make a Reservation!</h2>
-
-                <div class="form-field">
-                    <input type="text" placeholder="Name">
-                </div>
-
-                <div class="form-field">
-                    <input type="email" placeholder="Email">
-                </div>
-
-                <div class="form-field">
-                    <input type="date" placeholder="Date" title="Date">
-                </div>
-
-                <div class="form-field">
-                    <input type="time" placeholder="Time" title="Time" >
-                </div>
-
-                <div class="form-field">
-                    <input type="number" placeholder="Number of Guests">
-                </div>
-
-                <div class="form-field">
-                    <input type="text" placeholder="Mention any special requests">
-                </div>
-                <button class="btn">Confirm</button>
-
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <input type="text" placeholder="Enter your Phone Number" name="num" required>
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                    <input type="number" placeholder="Number of Guests" name="guests" required>
+                    <input type="text" placeholder="Mention any special requests" name="requests" required>
+                    <button class="btn">Reserve</button>
             </form>
         </div>
 </body>
