@@ -17,13 +17,12 @@ from django.urls import path, include
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from indianexpress.views import home, signup, activation_sent_view, activate, menu, reservation, cart,gallery
+from indianexpress.views import home, signup, menu, reservation, cart,gallery
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('indianexpress.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('sent/', activation_sent_view, name="activation_sent"),
 
 
 
