@@ -1,4 +1,4 @@
-Updated# from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.decorators import login_required
 from itertools import product
 
 from django.core.mail import send_mail
