@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'indianexpress/base.html' %}
+{% load static %}
+
+<h1>Reservation</h1>
+{% block content %}
+    <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Book Us!</title>
+
+    <style>
+        body {
+            color: black;
+            text-align: center;
+        }
+
+        .banner-container {
+            padding-top: 10px;
+            width:auto;
+        }
+
+        .container-time{
+
+            background-color: rgba(0,0,0,.95);
+            padding: 20px;
+            outline: 2px dashed #998100;
+            outline-offset: -20px;
+            text-align: center;
+
+        }
+
+        .heading-timeopen{
+            color: #998100;
+            font-size: 35px;
+        }
+
+        .heading-daysandcontact{
+            color: #998100;
+            font-size: 30px;
+        }
+
+        .heading-time{
+            color: antiquewhite;
+            font-size: 15px;
+        }
+
+        .heading-phone{
+            color: antiquewhite;
+            font-size: 20px;
+        }
+
+        form{
+            display: grid;
+            grid-row-gap: 20px ;
+            grid-gap: 20px;
+            font-weight: 700;
+        }
+
+        .container-form{
+            width: auto;
+        }
+
+        .form-field{
+           display: grid;
+           width: auto;
+        }
+
+        .btn{
+            background-color: rgba(0,0,0,.95);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .2s;
+            width: auto;
+        }
+
+        .btn:hover{
+            transform: scale(1.03);
+            box-shadow: 10px 12px 15px rgba(0,0,0,.3);
+        }
+
+    </style>
+    </head>
+    <body>
+
+    <div class="banner-container">
+        <div class="container-time">
+            <h2 class="heading-timeopen">TIME OPEN</h2>
+            <h3 class="heading-daysandcontact">Monday-Saturday</h3>
+            <h4 class="heading-time">11am-10pm (Lunch and Dinner)</h4>
+            <h4 class="heading-time">Sunday closed</h4>
+            <h3 class="heading-daysandcontact">Contact Us!</h3>
+            <h4 class="heading-time">1110 S 67th Street</h4>
+            <h4 class="heading-phone">Call us @ 402-111-1111</h4>
+        </div>
+    </div>
+        <div class="container-form">
+            <form action="#" method="post"> {% csrf_token %}
+                <h2 class="heading heading-yellow">Make a Reservation!</h2>
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <input type="text" placeholder="Enter your Phone Number" name="num" required>
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                    <input type="number" placeholder="Number of Guests" name="guests" required>
+                    <input type="text" placeholder="Mention any special requests" name="requests" required>
+                    <button class="btn">Reserve</button>
+            </form>
+        </div>
+</body>
+    </form>
+{% endblock content %}
+</html>

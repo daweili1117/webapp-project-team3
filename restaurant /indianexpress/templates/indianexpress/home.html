@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'indianexpress/base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+    h1 {
+        text-align: center;
+
+    }
+    p {
+        text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+
+    </style>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+       <div class="page-container">
+           <h1>Welcome to Indian Xpress </h1>
+           <p>
+               Our Address<br/>
+           110 S 67th St, Omaha, NE 68182<br/>
+           402-111-1111</p>
+           <h2>A little About Us</h2>
+
+
+       </div>
+
+   <div class="content container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="links">
+                   <!-- Example row of columns -->
+                   <div class="row">
+                       <div class="col-md-3">
+                           <div class="thumbnail">
+                               <img src="{% static "images/image1.jpg" %}" alt="customer"/>
+                               <div class="caption">
+                                   <h2>Customer</h2>
+                                   <p>We see our success in our customers success </p>
+
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="thumbnail">
+                               <img src="{% static "images/services.jpeg" %}" alt="cupcakes"/>
+                               <div class="caption">
+                                   <h2>Services</h2>
+                                   <p>Great Services</p>
+
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="thumbnail">
+                               <img src="{% static "images/flavours.jpg" %}" alt="lunch"/>
+                               <div class="caption">
+                                   <h2>Flavours</h2>
+                                   <p>Vibrant Flavours.</p>
+
+                               </div>
+                           </div>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+       <p> <b>Indian Xpress</b> has been serving authentic Indian cuisine and catering services for over 5 years<br/>
+    in Omaha, Nebraska. We are just 5 minutes walk from University of Nebraska at  Omaha and<br/>
+    professional associates who work in Aksarben area.We offerseveral items in menu, from <br/>
+    starters main course and desserts.<br/>
+    We offer a blend of authentic ancient traditional food with modern touch.<br/>
+    From the moment you step into Indian Xpress, making your whole experience a fulfilling,satisfying<br/>
+        and relaxing one is your only obsession.<br/>
+    We pride ourselves on serving delicious meals that rival fine dining but doing so in a fun,casual<br/>
+    environment at reasonable prices.</p>
+
+   </body>
+
+{% endblock %}
+
+</html>
