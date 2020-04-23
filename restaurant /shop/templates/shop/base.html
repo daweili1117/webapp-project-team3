@@ -1,0 +1,149 @@
+{# HTML5 declaration #}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    {# Make modifiable head elements #}
+   <head>
+
+    <title>Indian Xpress</title>
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="{% static "css/base.css" %}" rel="stylesheet" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        .navbar-brand {
+            font-size: xx-large !important;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+        .product-list {
+            padding: 25px 50px 75px 100px;
+            background-color: lightblue;
+        }
+
+
+    </style>
+
+    </head>
+    <body id="app-layout">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#myNavbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="/">IndianXpress</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'indianexpress:home' %}">About</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+                        <span class="caret"></span>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li {% if not category %}class="selected"{% endif %}>
+                                <a href="{% url "shop:product_list" %}">All</a>
+                            </li>
+                              {% for c in categories %}
+                                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                                  <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+
+                    </li>
+                    </li>
+                    <li><a href="{% url 'indianexpress:gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'indianexpress:cart' %}">Cart</a></li>
+                    <li><a href="{% url 'indianexpress:reservation' %}">Reservation</a></li>
+
+
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Login</a></li>
+
+                    {% endif %}
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+
+
+
+  <div id="subheader">
+    <div class="cart">
+      {% with total_items=cart|length %}
+          {% if cart|length > 0 %}
+            Your cart: 
+            <a href="{% url "cart:cart_detail" %}">
+              {{ total_items }} item{{ total_items|pluralize }},
+              ${{ cart.get_total_price }}
+            </a>
+          {% else %}
+            Your cart is empty.
+          {% endif %}
+        {% endwith %}
+    </div>
+  </div>
+
+{#  <div class="product-detail">#}
+{#    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">#}
+{#    <h1>{{ product.name }}</h1>#}
+{#    <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>#}
+{#    <p class="price">${{ product.price }}</p>#}
+{#    <form action="{% url "cart:cart_add" product.id %}" method="post">#}
+{#      {{ cart_product_form }}#}
+{#      {% csrf_token %}#}
+{#      <input type="submit" value="Add to cart">#}
+{#    </form>#}
+{#    {{ product.description|linebreaks }}#}
+{#  </div>#}
+
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

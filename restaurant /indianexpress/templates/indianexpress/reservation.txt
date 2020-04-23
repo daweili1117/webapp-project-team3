@@ -1,0 +1,21 @@
+Hello {{ name }}, Thank you for making a reservation with IndianXpress. Following are your reservation details:
+
+Name: {{ name }}
+
+Email: {{ email }}
+
+Phone number: {{ num }}
+
+Reservation Date: {{ date }}
+
+Reservation Time: {{ time }}
+
+Number of guests: {{ guests }}
+
+Additional requests: {{ requests }}
+
+
+We can't wait to see you!!
+
+Best
+IndianXpress Team
