@@ -6,16 +6,18 @@ from indianexpress.models import Reservation
 
 
 class SignUpForm(UserCreationForm):
+    username = forms.CharField(max_length=30)
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
-    # phone_number = forms.CharField(max_length=10)
+    #phone_number = forms.CharField(max_length=10)
     zip_code = forms.CharField(max_length=10)
     email = forms.EmailField(max_length=150)
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'zip_code',
+        fields = ('username','first_name', 'last_name', 'zip_code',
                   'email', 'password1', 'password2',)
+
 
 
 class ReservationForm(forms.ModelForm):
