@@ -17,7 +17,7 @@ from django.urls import path, include
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from indianexpress.views import home, signup, activation_sent_view, activate, menu, reservation, cart,gallery
+from indianexpress.views import home, signup, menu, reservation, cart,gallery
 
 from django.contrib import admin
 from django.urls import path, include
@@ -28,7 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('indianexpress.urls', namespace="indianexpress")),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('sent/', activation_sent_view, name="activation_sent"),
     path('cart/', include('cart.urls', namespace='cart')),
     path('orders/', include('orders.urls', namespace='orders')),
     path('payment/', include('payment.urls', namespace='payment')),
