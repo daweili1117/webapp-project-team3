@@ -35,7 +35,7 @@ def payment_process(request):
             order.braintree_id = result.transaction.id
             order.save()
             # create invoice e-mail
-            subject = 'Fun for Kids Store - Invoice no. {}'.format(order.id)
+            subject = 'IndianExpress - Invoice no. {}'.format(order.id)
             message = 'Thank you for shopping at Indianexpress.' \
                       'Your payment has been processed successfully. ' \
                       'Invoice no. {}'.format(order.id)
