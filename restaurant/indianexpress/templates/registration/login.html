@@ -17,13 +17,15 @@
     <br />
     <br />
     <form method="post" action="{% url 'login' %}">
+        <div class="row">
         {{ form.as_p }}
         {% csrf_token %}
+        </div>
+        <div class="row">
+                <button class="btn btn-success ml-2" type="submit">Log In</button>
 
-        <button class="btn btn-success ml-2" type="submit">Log In</button>
-
-        <p><a href="{% url 'indianexpress:signup' %}">Create an account</a>.</p>
-
+                <p><a href="{% url 'indianexpress:signup' %}">Create an account</a>.</p>
+        </div>
     </form>
 {% endblock %}
 </body>

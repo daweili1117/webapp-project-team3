@@ -50,19 +50,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/indianexpress/templates/indianexpress" />
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/indianexpress/static/images" />
-      <recent name="$PROJECT_DIR$/indianexpress/static/css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/indianexpress/templates/indianexpress" />
       <recent name="$PROJECT_DIR$/indianexpress/static/images" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\indianexpress" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\registration" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/indianexpress/templates/indianexpress" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/indianexpress/static/images" />
+      <recent name="$PROJECT_DIR$/indianexpress/static/css" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.restaurant">
@@ -213,6 +213,10 @@
       <workItem from="1587602699521" duration="213000" />
       <workItem from="1587602943606" duration="146000" />
       <workItem from="1587603092500" duration="815000" />
+      <workItem from="1587657490651" duration="7000" />
+      <workItem from="1587657501228" duration="3858000" />
+      <workItem from="1587663847741" duration="2681000" />
+      <workItem from="1587667020927" duration="163000" />
     </task>
     <servers />
   </component>
@@ -232,18 +236,18 @@
       <screen x="0" y="0" width="1344" height="840" />
     </state>
     <state x="306" y="105" key="#Inspections/0.0.1344.840@0.0.1344.840" timestamp="1587218505619" />
-    <state x="136" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587603170711">
+    <state x="136" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587667135301">
       <screen x="0" y="0" width="1344" height="840" />
     </state>
-    <state x="136" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1344.840@0.0.1344.840" timestamp="1587603170711" />
+    <state x="136" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1344.840@0.0.1344.840" timestamp="1587667135301" />
     <state x="406" y="229" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586884347181">
       <screen x="0" y="0" width="1344" height="840" />
     </state>
     <state x="406" y="229" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1344.840@0.0.1344.840" timestamp="1586884347181" />
-    <state x="406" y="129" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587590331080">
+    <state x="406" y="129" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587658254297">
       <screen x="0" y="0" width="1344" height="840" />
     </state>
-    <state x="406" y="129" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1344.840@0.0.1344.840" timestamp="1587590331080" />
+    <state x="406" y="129" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1344.840@0.0.1344.840" timestamp="1587658254297" />
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584591368020" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1584411969472">
       <screen x="0" y="0" width="1366" height="728" />
@@ -285,10 +289,10 @@
       <screen x="0" y="0" width="1344" height="840" />
     </state>
     <state width="1302" height="280" key="GridCell.Tab.1.right/0.0.1344.840@0.0.1344.840" timestamp="1587584077387" />
-    <state x="173" y="59" key="SettingsEditor" timestamp="1587603209791">
+    <state x="173" y="59" key="SettingsEditor" timestamp="1587667183135">
       <screen x="0" y="0" width="1344" height="840" />
     </state>
-    <state x="173" y="59" key="SettingsEditor/0.0.1344.840@0.0.1344.840" timestamp="1587603209791" />
+    <state x="173" y="59" key="SettingsEditor/0.0.1344.840@0.0.1344.840" timestamp="1587667183135" />
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586378879702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -8,13 +8,6 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_text
 from django.contrib.auth import login, authenticate
 
-from cart.cart import Cart
-from cart.forms import CartAddProductForm
-from orders.forms import OrderCreateForm
-from orders.models import OrderItem
-from shop.models import Product, Category
-from .forms import SignUpForm
-from .models import *
 from .forms import *
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
@@ -89,14 +82,15 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'indianexpress/signup.html', {'form': form})
 
+
 def reservation(request):
     test = Reservation.objects.all
 
     if request.method == 'POST':
         form = ReservationForm(request.POST)
         if form.is_valid():
-            #reserve = form.save()
-            #reserve.refresh_from_db()
+            # reserve = form.save()
+            # reserve.refresh_from_db()
             name = form.cleaned_data.get('name')
             email = form.cleaned_data.get('email')
             num = form.cleaned_data.get('num')
@@ -126,8 +120,7 @@ def reservation(request):
             return render(request, 'indianexpress/confirm.html', ctx)
     else:
         aq = 'Book Us!'
-        return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title': aq})
-
+    return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title': aq})
 
 
 def menu(request):

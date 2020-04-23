@@ -16,31 +16,44 @@
 
 
     <div class="text-primary"><h1>Be Our Friend!</h1></div>
-      <p class="text-danger">Please fill in this form to create an account.</p>
+    <p class="text-danger">Please fill in this form to create an account.</p>
 
 <form method="post">
-  {% csrf_token %}
+    <div class="row">
+      {% csrf_token %}
+      {% for field in form %}
+        <p>
+          {{ field.label_tag }}<br>
+          {{ field }}
+        <br><br><br>
+          {% if field.help_text %}
+            <small style="color: grey">{{ field.help_text }}</small>
+          {% endif %}
+            <div class="row">
+              {% for error in field.errors %}
+                <p style="color: red">
 
+                    {{ error }}
+                </p>
 
-  {% for field in form %}
-    <p>
-      {{ field.label_tag }}<br>
-      {{ field }}
-      {% if field.help_text %}
-        <small style="color: grey">{{ field.help_text }}</small>
-      {% endif %}
-      {% for error in field.errors %}
-        <p style="color: red">{{ error }}</p>
+              {% endfor %}
+        </p>
+          </div>
       {% endfor %}
-    </p>
+    <div class="row">
+       <div class ="btn">
+            <button class="btn btn-success ml-2 btn-lg " type="submit">
+                Sign Up
+            </button>
+            <button class="btn btn-danger btn-lg" type="submit">
+                Cancel
+            </button>
+            <p>
+                Already have an account? <a href="{% url 'login' %}">log in</a>.
+            </p>
+      </div>
 
-  {% endfor %}
-
-   <div class ="btn">
-  <button class="btn btn-success ml-2 btn-lg " type="submit">Sign Up</button>
-       <button class="btn btn-danger btn-lg" type="submit"> Cancel</button>
-       <p>Already have an account? <a href="{% url 'login' %}">log in</a>.</p>
-  </div>
+    </div>
 
 </form>
 {% endblock content %}

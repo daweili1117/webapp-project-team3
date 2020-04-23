@@ -9,38 +9,12 @@
        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="{% static "css/base.css" %}" rel="stylesheet" >
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-    <style>
-
-        /* Remove the navbar's default margin-bottom and rounded borders */
-
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {
-            height: 450px
-        }
-
-        .navbar-brand {
-            font-size: xx-large !important;
-        }
-
-        /* Set black background color, white text and some padding */
-        footer {
-            background-color: black;
-            color: white;
-            padding: 15px;
-        }
-
-    </style>
 
     </head>
     <body id="app-layout">
@@ -105,12 +79,10 @@
             </div>
         </nav>
 
-
-
         <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% block content %}
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
                 <div class="links">
                     <!-- Example row of columns -->
                     <div class="row">
@@ -148,7 +120,8 @@
                     </div>
                 </div>
             {% endblock %}
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
