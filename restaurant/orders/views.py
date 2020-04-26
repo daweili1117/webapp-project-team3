@@ -33,11 +33,17 @@ def admin_order_detail(request, order_id):
 
 def order_create(request):
     cart = Cart(request)
+    itemCount=0
+    products=''
+    itemPrice=0.0
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             order = form.save()
             for item in cart:
+                itemCount = itemCount + item['quantity']
+                products = str(products)+str(item['product'])+ ' '
+                itemPrice =float(itemPrice)+ float(item['total_price'])
                 OrderItem.objects.create(order=order,
                                          product=item['product'],
                                          price=item['price'],
@@ -46,8 +52,19 @@ def order_create(request):
             cart.clear()
             # set the order in the session
             request.session['order_id'] = order.id
+            request.session['orderFirstName'] = order.first_name
+            request.session['orderLastName'] = order.last_name
+            request.session['orderEmail'] = order.email
+            request.session['orderAddress'] = order.address
+            request.session['orderPostalCode'] = order.postal_code
+            request.session['orderCity'] = order.city
+            request.session['itemCount'] = itemCount
+            request.session['itemPrice'] = float(itemPrice)
+            request.session['productList'] = str(products)
+
             # redirect for payment
             return redirect(reverse('payment:process'))
+
 
     else:
         form = OrderCreateForm()
