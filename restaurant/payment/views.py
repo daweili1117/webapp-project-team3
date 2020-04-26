@@ -7,15 +7,17 @@ from django.shortcuts import render, redirect, get_object_or_404
 from orders.forms import OrderCreateForm
 from orders.models import Order
 from django.template.loader import render_to_string
-from django.core.mail import EmailMessage, send_mail
+from django.core.mail import EmailMessage, send_mail,EmailMultiAlternatives
 from django.conf import settings
 # import weasyprint
 from io import BytesIO
 
 
 def payment_process(request):
-    order_id = request.session.get('order_id')
+     order_id = request.session.get('order_id')
     order = get_object_or_404(Order, id=order_id)
+    orderName = request.session.get('orderFirstName')
+    print(orderName)
 
     if request.method == 'POST':
         # retrieve nonce
@@ -34,71 +36,43 @@ def payment_process(request):
             # store the unique transaction id
             order.braintree_id = result.transaction.id
             order.save()
+            if request.method == 'POST':
+                      order_id = request.session.get('order_id')
+                      first_name = request.session.get('orderFirstName')
+                      last_name = request.session.get('orderLastName')
+                      email = request.session.get('orderEmail')
+                      address = request.session.get('orderAddress')
+                      postal_code = request.session.get('orderPostalCode')
+                      city = request.session.get('orderCity')
+                      items = request.session.get('itemCount')
+                      price = request.session.get('itemPrice')
+                      products = request.session.get('productList')
+                      ctx = {
+                          'order_id': order_id,
+                          'first_name': first_name,
+                          'last_name': last_name,
+                          'email': email,
+                          'address': address,
+                          'postal_code': postal_code,
+                          'city': city,
+                          'items': items,
+                          'price': price,
+                          'products': products,
+                       }
             # create invoice e-mail
-            subject = 'IndianExpress - Invoice no. {}'.format(order.id)
-            message = 'Thank you for shopping at Indianexpress.' \
-                      'Your payment has been processed successfully. ' \
-                      'Invoice no. {}'.format(order.id)
-            email = EmailMessage(subject,
-                                 message,
-                                 'indian.xpress7@gmail.com',
-                                 [order.email])
+                      subject = 'Indian Express: online Pickup order confirmation - Order Number {}'.format(order.id)
+                        #message = 'Thank you for shopping at Indianexpress.' \
+                                  #'Your payment has been processed successfully. ' \
+                                  #'Invoice no. {}'.format(order.id)
+                      text = render_to_string('indianexpress/orderconfrim.txt',ctx)
+                      print(text)
+                      email = EmailMultiAlternatives(subject,text,
+                                             'indian.xpress7@gmail.com',
+                                             [order.email])
 
-            # if request.method == 'Get':
-            #     form = OrderCreateForm(request.GET)
-            #     if form.is_valid():
-            #         first_name = form.cleaned_data.get('first_name')
-            #         last_name = form.cleaned_data.get('last_name')
-            #         email = form.cleaned_data.get('email')
-            #         address = form.cleaned_data.get('address')
-            #         postal_code = form.cleaned_data.get('postal_code')
-            #         city = form.cleaned_data.get('city')
-            #         ctx = {
-            #             'first_name': first_name,
-            #             'last_name': last_name,
-            #             'email': email,
-            #             'address': address,
-            #             'postal_code': postal_code,
-            #             'city': city,
-            #         }
-            #
-            # message = render_to_string('indianexpress/orderconfrim.txt', ctx)
-            # send_mail('Your Order with IndianXpress',
-            #             message,
-            #             'indxpr@gmail.com',
-            #             [email],)
-            # return render(request, 'payment/done.html', ctx)
-            #
-
-
-
-
-        #
-        #
-        #  # create invoice e-mail
-        #  subject = 'Indianexpress - Invoice no. {}'.format(order.id)
-        #
-        #  message = 'Thank you for shopping at Indianexpress.' \
-        #            ' Your payment has been processed successfully. ' \
-        #            'Invoice no. {}'.format(order.id)
-        #
-        #  email = EmailMessage(subject,
-        #                       message,
-        #                       'indian.xpress7@gmail.com',
-        #                       [order.email])
-        #  # generate PDF
-        #  # html = render_to_string('orders/order/pdf.html', {'order': order})
-        #  # out = BytesIO()
-        #  # stylesheets = [weasyprint.CSS(settings.STATIC_ROOT + 'css/pdf.css')]
-        #  # weasyprint.HTML(string=html).write_pdf(out, stylesheets=stylesheets)
-        #
-        #  # attach PDF file
-        # # email.attach('order_{}.pdf'.format(order.id),
-        # #              out.getvalue(),
-        # #              'application/pdf')
         #  # send e-mail
 
-            email.send()
+                      email.send()
             return redirect('payment:done')
 
         else:
