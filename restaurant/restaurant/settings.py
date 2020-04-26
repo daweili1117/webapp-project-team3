@@ -138,9 +138,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CART_SESSION_ID = 'cart'
 
 # Braintree settings
-BRAINTREE_MERCHANT_ID = '4zhxd54vmm7c2brz'  # Merchant ID
-BRAINTREE_PUBLIC_KEY = '4ddsm9xfctdxr3zj'   # Public Key
-BRAINTREE_PRIVATE_KEY = 'b36346ba394093c7a483e6d4de50d1e0'  # Private key
+BRAINTREE_MERCHANT_ID = 'xq969yn9jvznf77h'  # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'dj4543t2n937ykk2'   # Public Key
+BRAINTREE_PRIVATE_KEY = 'e7d1233b6d48134588dc97785ffd6ba0'  # Private key
 
 Configuration.configure(
     Environment.Sandbox,
