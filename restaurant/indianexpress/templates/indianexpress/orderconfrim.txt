@@ -1,18 +1,28 @@
-Hello {{ name }}, Thank you for making a order with IndianXpress. Following are your order details:
+Hello {{ first_name }}, Thank you for making a order with IndianXpress. Following are your order details:
 
-Name: {{ name }}
+Indian Express: online Pickup order confirmation :
 
-Email: {{ email }}
+Pickup Location: 110 S 67th St, Omaha, NE 68182, 402-111-1111
 
-Phone number: {{ num }}
+Order Number : {{order_id }}
 
-Reservation Date: {{ date }}
+First Name : {{ first_name }}
 
-Reservation Time: {{ time }}
+Last Name : {{ last_name }}
 
-Number of guests: {{ guests }}
+Email : {{ email }}
 
-Additional requests: {{ requests }}
+Address : {{ address }}
+
+Postal code : {{ postal_code }}
+
+City : {{ city }}
+
+Products : {{products}}
+
+TotalItems: {{items}}
+
+TotalPrice : {{price}}
 
 
 We can't wait to see you!!
