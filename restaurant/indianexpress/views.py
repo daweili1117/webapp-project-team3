@@ -77,7 +77,7 @@ def reservation(request):
             return render(request, 'indianexpress/confirm.html', ctx)
     else:
        
-         return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title': aq})
+         return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation})
 
 
 def menu(request):
