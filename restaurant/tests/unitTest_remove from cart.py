@@ -96,16 +96,16 @@ class CMS_ATS(unittest.TestCase):
             elem.send_keys(Keys.RETURN)
             time.sleep(1)
 
-            try:
-                elem = driver.find_element_by_xpath("")
-                elem.send_keys(Keys.RETURN)
-                time.sleep(1)
-                assert True
+            #try:
+                #elem = driver.find_element_by_xpath("")
+                #elem.send_keys(Keys.RETURN)
+                #time.sleep(1)
+                #assert True
 
-            except NoSuchElementException:
-                self.fail("remove not shown")
-                assert False
-            time.sleep(1)
+            #except NoSuchElementException:
+                #self.fail("remove not shown")
+                #assert False
+            #time.sleep(1)
 
             # if continue_test:
             #     try:
