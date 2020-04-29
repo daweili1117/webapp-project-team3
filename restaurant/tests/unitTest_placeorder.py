@@ -8,11 +8,11 @@ from selenium.common.exceptions import NoSuchElementException
 class CMS_ATS(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Safari()
+        self.driver = webdriver.Chrome()
 
     def test_cms(self):
-        user = "test"
-        pwd = "test123"
+        user = "testcase"
+        pwd = "testcase123"
 
         driver = self.driver
         driver.maximize_window()
