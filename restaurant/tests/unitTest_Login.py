@@ -9,11 +9,11 @@ from selenium.common.exceptions import NoSuchElementException
 class restaurant_test(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Safari()
+        self.driver = webdriver.Chrome()
 
     def test_cms(self):
-        user = "test"
-        pwd = "test123"
+        user = "testcase"
+        pwd = "testcase123"
 
         driver = self.driver
         driver.maximize_window()
@@ -39,7 +39,7 @@ class restaurant_test(unittest.TestCase):
         try:
             elem = driver.find_element_by_xpath("/html/body/nav/div/div[2]/ul[2]/li/a")
             elem.send_keys(Keys.RETURN)
-            time.sleep(1)
+            time.sleep(2)
 
 
         except NoSuchElementException:
